@@ -43,7 +43,7 @@ jobs:
        image: sujaysuj/javaappaction
        tags: latest
        registry: docker.io
-       dockerfile: docker/carte/Dockerfile
+       dockerfile: docker/carts/Dockerfile
        username: ${{ secrets.DOCKER_USER }}
        password: ${{ secrets.DOCKER_PASS }}
 
