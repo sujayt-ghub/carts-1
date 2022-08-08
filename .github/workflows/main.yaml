@@ -39,7 +39,7 @@ jobs:
     # Push to dockerhub
     - name: Push to Docker Hub
       uses: mr-smithers-excellent/docker-build-push@v5
-    _ name: Build & push Docker image
+    - name: Build & push Docker image
       with:
        image: sujaysuj/javaappaction
        tags: latest
