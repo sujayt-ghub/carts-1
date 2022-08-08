@@ -38,14 +38,15 @@ jobs:
     #
     # Push to dockerhub
     - name: Push to Docker Hub
-      uses: docker/build-push-action@v1
-      if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/master'
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      name: Build & push Docker image
       with:
-        username: ${{ secrets.DOCKER_USER }}
-        password: ${{ secrets.DOCKER_PASS }}
-        repository: ${{ env.GROUP }}/${{ env.REPO }}
-        tag_with_ref: true
-        tag_with_sha: true
-        path: docker/carts
-        dockerfile: docker/carts/Dockerfile
+       image: sujaysuj/javaappaction
+       tags: latest
+       registry: docker.io
+       dockerfile: docker/carte/Dockerfile
+       username: ${{ secrets.DOCKER_USER }}
+       password: ${{ secrets.DOCKER_PASS }}
+
+      
 
