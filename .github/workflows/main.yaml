@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-    - "*"  # run for branches
+    - "*"  # run forbranches
     tags:
     - "*"  # run for tags
   pull_request:
